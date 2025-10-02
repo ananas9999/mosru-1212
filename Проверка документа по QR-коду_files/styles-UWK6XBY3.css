@@ -1,1 +1,69 @@
-html,body{height:100%;margin:0;padding:0;overflow:hidden}
+/* Базовые стили */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* только по оси X */
+  font-family: Arial, sans-serif;
+}
+
+/* Контент */
+.content {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Заголовок и футер */
+.header, .desktop-footer {
+  padding: 30px 128px;
+}
+
+.main {
+  padding: 24px 128px;
+  background: #f5f6f7;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 1024px) {
+  .header, .desktop-footer {
+    padding: 20px 40px;
+  }
+  .main {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header, .desktop-footer {
+    padding: 20px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .desktop-footer-icons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .main {
+    padding: 16px;
+  }
+  .content {
+    padding: 16px;
+    border-radius: 10px;
+  }
+  .xslt_11857s {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header img, .desktop-footer img {
+    max-width: 150px;
+    height: auto;
+  }
+  .refresh-button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
